@@ -30,7 +30,6 @@ function arrow_click_two(){
         audioObj.addEventListener("canplaythrough", event => {
             audioObj.play();});
     
-    
 };
 
 function change_slide(slidenumber){
@@ -39,20 +38,23 @@ function change_slide(slidenumber){
         setTimeout(function(){
             slide.src=srcprefix+slidenumber+'.webp';
             change_slide(slidenumber);
-        }, 4000);
+        }, 2000);
+    }else if (slidenumber == 13){
+        setTimeout(function(){
+            slide.src=srcprefix+slidenumber+'.webp';
+            change_slide(slidenumber);
+        }, 620);
     }else if (slidenumber < 14){
         setTimeout(function(){
             slide.src=srcprefix+slidenumber+'.webp';
             change_slide(slidenumber);
         }, 1500);
-    }else{
+    }else if (slidenumber == 14){
         setTimeout(function(){
             hide_elem("slide");
             unhide_elem("vaporware");
-            
-        }, 4000);
+        }, 600);
     }
-    
 }
 
 
